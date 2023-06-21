@@ -1,0 +1,17 @@
+.nav-bar{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.logo{
+    width: 60px;
+    height: 65px;
+}
+.nav-links{
+    width: 50%;
+   margin-top: 0px;
+   background-color: red;
+}

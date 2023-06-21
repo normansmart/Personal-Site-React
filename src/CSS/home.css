@@ -1,0 +1,11 @@
+.main-container{
+    width: 95%;
+    height: 100vh;
+    /* background-color: #0E1722; */
+    color: white;
+    display: flex;
+    margin: auto;
+    background-color: azure;
+}
+
+

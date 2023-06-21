@@ -1,0 +1,32 @@
+.project-container{
+    width: calc(100% - 400px);
+    height: 90%;
+    background-color: rgb(67, 149, 250);
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+
+
+
+/*  FOR DEV AND UX WORKS IN THE PROJECT CONTAINER*/
+.dev-container{
+    width: 40vw;
+    height: 40vw;
+    background-color: bisque;
+    margin: auto;
+}
+
+
+#regimen {
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgba(181, 59, 11, 0.442);
+    border-radius: 100%;
+ 
+    animation: rotation 90s infinite linear;
+  }
+
+
+
+
