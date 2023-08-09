@@ -1,7 +1,6 @@
-.project-container{
+.project-container {
     width: calc(100% - 400px);
     height: 90%;
-    background-color: rgb(67, 149, 250);
     display: flex;
     justify-content: center;
     align-items: baseline;
@@ -10,23 +9,158 @@
 
 
 /*  FOR DEV AND UX WORKS IN THE PROJECT CONTAINER*/
-.dev-container{
+.dev-container {
     width: 40vw;
     height: 40vw;
-    background-color: bisque;
+ 
+    position: relative;
     margin: auto;
+
 }
 
 
-#regimen {
-    width: 100%;
-    height: 100%;
-    border: 1px solid rgba(181, 59, 11, 0.442);
+  
+  #inner-circle4 {
+    width: 8%;
+    height: 8%;
+    position: absolute;
+    left: 46%;
+    top: 46%;
     border-radius: 100%;
- 
-    animation: rotation 90s infinite linear;
+    background-color: #F9D796;
+    border: none;
+    text-align: center;
+    animation: starglow 10s infinite linear;
   }
 
 
 
+  
+ 
 
+
+
+
+#val {
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.442);
+    border-radius: 100%;
+    position: absolute;
+    rotate: 180deg;
+
+    animation: rotation 675s infinite linear;
+}
+
+
+.val-project {
+    width: 13%;
+    position: relative;
+    top: 28%;
+    left: -3%;
+}
+
+
+#jwyld {
+    width: 75%;
+    height: 75%;
+    border: 1px solid rgba(255, 255, 255, 0.442);
+    border-radius: 100%;
+    position: absolute;
+    top: 12.5%;
+    left: 12.5%;
+    rotate: 40deg;
+    animation: rotation 575s infinite linear;
+}
+
+
+.jwyld-project {
+    width: 15%;
+    position: relative;
+    top: 30%;
+    left: -5%;
+}
+
+
+#regimen {
+    width: 50%;
+    height: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.442);
+    border-radius: 100%;
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    rotate: 320deg;
+    animation: rotation 475s infinite linear;
+}
+
+
+.regimen-project {
+    width: 20%;
+    position: relative;
+    top: 35%;
+    left: -10%;
+}
+
+
+
+#bunkbud {
+    width: 30%;
+    height: 30%;
+    border: 1px solid rgba(255, 255, 255, 0.442);
+    border-radius: 100%;
+    position: absolute;
+    top: 35%;
+    left: 35%;
+    rotate: 100deg;
+    animation: rotation 400s infinite linear;
+}
+
+
+.bunkbud-project {
+    width: 30%;
+    position: relative;
+    top: 45%;
+    left: -10%;
+}
+
+
+
+
+
+  @keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+  
+    to {
+      transform: rotate(360deg);
+    }
+  } 
+  
+
+  @keyframes starglow {
+    0% {
+      background-color: #F9D796;
+
+    }
+  
+    25%{
+  
+      background-color: #FEB044;
+    }
+  
+    50% {
+      background-color: #FE502A;
+    
+    }
+    75%{
+      background-color: #FEB044;
+    
+    }
+  
+    100% {
+      background-color: #F9D796;
+     
+    }
+  }

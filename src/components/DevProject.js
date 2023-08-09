@@ -1,13 +1,13 @@
 import React from 'react';
 
-function DevProject(title, background) {
+function DevProject({orbit, project , image}) {
 
-
+console.log(orbit)
   return (
 
-    <div id="regimen">
+    <div id= {orbit}  >
 
-     <img src='' />
+     <img className= {project} src= {image} />
 
     </div>
 

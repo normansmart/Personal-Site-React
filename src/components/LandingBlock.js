@@ -45,7 +45,7 @@ const LandingBlock = ({ updates }) => {
 
         <div className="landing-container">
 
-            <p className="introduction"> Hello, </p>
+            <p className="introduction"> Hello, my name is Xavier Amarachi, I’m a Full-stack developer with a focus in interface design and user experience. This website serves as my portfolio and personal blog site. <br/> <br/> I’m not much of a writer or blogger. I have a passion for design and I like to speak through my work. Feel free to look over my projects, read case studies, or just admire some artwork. </p>
 
        
             <div className="socials"> {socialList} </div>

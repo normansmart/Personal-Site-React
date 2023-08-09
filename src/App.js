@@ -2,6 +2,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navigation from './Navigation';
 import Homepage from './pages/Home';
+import Vale from "./pages/Vale";
 import './App.css';
 
 function App() {
@@ -10,8 +11,9 @@ function App() {
       <Router>
         <Navigation />
         <Routes>
-          <Route path="/" element={<Homepage />} />
+          {/* <Route path="" element={<Homepage />} /> */}
 
+          <Route path="/" element={<Vale />} />
         </Routes>
 
       </Router>
