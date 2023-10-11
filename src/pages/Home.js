@@ -3,8 +3,13 @@ import { Octokit } from "octokit";
 import { useEffect, useState } from "react";
 import LandingBlock from "../components/LandingBlock";
 import ProjectBlock from "../components/ProjectBlock";
-import "../CSS/home.css"
+import AudioPlayer from 'react-h5-audio-player';
+import 'react-h5-audio-player/lib/styles.css';
 
+import ReactPlayer from 'react-player'
+
+import ReactAudioPlayer from 'react-audio-player';
+import "../CSS/home.css"
 
 //This page contains 2 sections: the personal info (LandingBlock) and project info (ProjectBlock)
 const Homepage = ({ }) => {
@@ -19,23 +24,21 @@ const Homepage = ({ }) => {
         })
             .then(r => r.json())
             .then(item => {
-           
-              setProjects(  item.filter(
+
+                setProjects(item.filter(
                     item => {
                         return item.name === "jersey-wyldlife" ||
                             item.name === "Attack-on-titan-tribute-game" ||
                             item.name === "REGIMEN" ||
                             item.name === "Journal"
-                          
+
                     }
                 )
-              )
+                )
 
-            }).catch(error =>{
+            }).catch(error => {
                 console.log(error)
             })
-
-
 
         // async function test() {
 
@@ -54,10 +57,7 @@ const Homepage = ({ }) => {
 
         // }
 
-
-
     }, [])
-
 
     useEffect(() => {
         fetch("https://api.github.com/repos/normansmart/Journal/commits", {
@@ -67,23 +67,42 @@ const Homepage = ({ }) => {
         })
             .then(r => r.json())
             .then(item => {
-             console.log(item)
-
+                console.log(item)
             })
-
-
-
-
     }, [])
 
+    useEffect(() => {
+
+
+    },[])
 
     return (
 
         <div className="main-container">
-            
-            <LandingBlock updates={projects} />
+            {/* <ReactPlayer playing={true}
+         controls={true}
+          url='https://coderadio-admin-v2.freecodecamp.org/listen/coderadio/radio.mp3' /> */}
+            {/* <ReactAudioPlayer
+                src="https://coderadio-admin-v2.freecodecamp.org/listen/coderadio/radio.mp3"
+                autoPlay
+                controls
+            /> */}
 
+            <AudioPlayer
+           id="audio-player"
+           autoPlay={true}
+           
+           showJumpControls={false}
+           volume={.5}
+                src="https://coderadio-admin-v2.freecodecamp.org/listen/coderadio/radio.mp3"
+                onPlay={e => console.log("onPlay")}
+               
+            // other props here
+            />
+
+            <LandingBlock updates={projects} />
             <ProjectBlock />
+
 
         </div>
 

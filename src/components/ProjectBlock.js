@@ -19,8 +19,9 @@ return(
    <div className="project-container"> 
 
    <DevWork projects={devProjectList} />
-
+   
    </div>
+
 )
 
 }

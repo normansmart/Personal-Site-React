@@ -1,0 +1,942 @@
+
+
+/*case study section*/
+
+main {
+    width: 100%;
+    margin: auto;
+
+
+}
+
+section {
+    width: 100%;
+    margin: auto;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+
+.section-container {
+    width: 1000px;
+    margin: auto;
+}
+
+section h2 {
+    width: 100%;
+    font-weight: 700;
+    font-size: 40px;
+    margin-top: 0px;
+
+}
+
+section h3 {
+    width: 70%;
+
+    color: #38383A;
+    margin-top: 10%;
+    font-weight: 700;
+    font-size: 25px;
+
+
+}
+
+section h4 {
+    width: 70%;
+    margin: auto;
+    color: #2D3950;
+    margin-top: 2%;
+    font-weight: 400;
+    font-size: 90PX;
+
+
+}
+
+section p {
+    width: 100%;
+
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 40px;
+}
+
+.persona {
+    width: 100%;
+}
+
+
+.criteria-group-container {
+    width: 1000px;
+    margin: auto;
+    margin-bottom: 5%;
+}
+
+.criteria-container {
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+}
+
+
+.criteria {
+    width: 330px;
+    height: 200px;
+    float: left;
+    margin: 1.66px;
+}
+
+
+
+.criteria img {
+    width: 300px;
+}
+
+
+.research-stats {
+    width: 100%;
+    display: inline-block;
+    margin-top: 100px;
+}
+
+.pointimage {
+    width: 500px;
+    height: auto;
+    float: left;
+    text-align: center;
+
+}
+
+.pointimage img {
+    width: 50%;
+}
+
+
+.point {
+    width: 500px;
+    height: 100%;
+    float: left;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.point h1 {
+    font-size: 50px;
+    font-weight: 500;
+    margin: 5%;
+}
+
+
+.colourtypo-container {
+    width: 100%;
+
+    display: inline-block;
+}
+
+
+
+.typo-container {
+    width: 500px;
+    float: left;
+
+}
+
+
+
+.colour-container {
+    width: 500px;
+    float: left;
+
+}
+
+
+.colour {
+    width: 30%;
+    float: left;
+
+    margin: 9%;
+    margin-top: 3%;
+}
+
+
+
+.hex {
+    width: 150px;
+    height: 150px;
+
+    border-radius: 5px;
+    box-shadow: 0 4px 10px 0 rgb(0 0 0 / 9%);
+
+}
+
+
+
+.logo-container {
+    width: 100%;
+
+
+
+}
+
+
+
+
+.logo {
+    width: 100%;
+    margin: auto;
+
+}
+
+
+@media screen and (max-width:1024px) {
+
+    .page-wrapper {
+        width: 100%;
+        float: right;
+        background-color: #ffffff;
+        margin-top: 50px;
+    }
+
+
+    .banner-container {
+        width: 100%;
+    }
+
+    .banner-container img {
+        width: 100%;
+    }
+
+
+    h2 {
+        color: #6fc064;
+        font-weight: 900;
+        font-size: 1rem;
+        letter-spacing: 1px;
+    }
+
+    p {
+        color: #333a40;
+        font-weight: 400;
+        font-size: 1.3rem;
+        line-height: 40px;
+
+        margin-top: 1%;
+    }
+
+    .page-wrapper {
+        width: 100%;
+        float: right;
+
+        margin-top: 50px;
+    }
+
+
+    .banner-container {
+        width: 100%;
+    }
+
+    .banner-container img {
+        width: 100%;
+    }
+
+
+
+    .container {
+        width: 100%;
+
+
+
+    }
+
+
+
+    .overview {
+        width: 90%;
+        margin: auto;
+
+    }
+
+    .overview h2 {
+        font-size: 40px;
+        font-weight: 700;
+
+
+    }
+
+    .overview p {
+        font-size: 21px;
+        font-weight: 400;
+        color: #38383A;
+        line-height: 40px;
+    }
+
+
+
+
+
+
+    /*case study section*/
+
+    main {
+        width: 100%;
+        margin: auto;
+
+
+    }
+
+    section {
+        width: 100%;
+        margin: auto;
+
+        padding-top: 5%;
+        padding-bottom: 5%;
+
+
+    }
+
+
+    .section-container {
+        width: 90%;
+        margin: auto;
+
+    }
+
+    section h2 {
+        width: 100%;
+
+        color: #38383A;
+        font-weight: 700;
+        font-size: 40px;
+
+        margin-top: 0px;
+
+    }
+
+    section h3 {
+        width: 70%;
+
+        color: #38383A;
+        margin-top: 10%;
+        font-weight: 700;
+        font-size: 25px;
+
+
+    }
+
+    section h4 {
+        width: 70%;
+        margin: auto;
+        color: #2D3950;
+        margin-top: 2%;
+        font-weight: 400;
+        font-size: 90PX;
+
+
+    }
+
+    section p {
+        width: 100%;
+
+        font-weight: 500;
+        font-size: 21px;
+        line-height: 40px;
+    }
+
+
+
+
+    .criteria-group-container {
+        width: 100%;
+        margin: auto;
+        margin-bottom: 5%;
+    }
+
+
+
+    .criteria-container {
+
+        width: 100%;
+
+        text-align: center;
+        display: inline-block;
+    }
+
+
+    .criteria {
+        width: 30%;
+
+
+
+        float: left;
+
+        margin: 1.66%;
+
+    }
+
+
+
+    .criteria img {
+        width: 100%;
+    }
+
+
+
+
+    .research-stats {
+        width: 100%;
+
+
+        display: inline-block;
+
+        margin-top: 100px;
+
+
+    }
+
+
+
+
+    .pointimage {
+        width: 50%;
+        height: auto;
+        float: left;
+        text-align: center;
+
+    }
+
+    .pointimage img {
+        width: 70%;
+    }
+
+
+    .point {
+
+        width: 50%;
+        height: 100%;
+
+        float: left;
+        padding: 100px 0;
+
+
+
+    }
+
+
+
+
+
+    .colourtypo-container {
+        width: 100%;
+
+
+    }
+
+
+
+    .typo-container {
+        width: 100%;
+
+
+    }
+
+
+
+    .typo-container p {
+
+        font-size: 30px;
+
+    }
+
+
+
+    .colour-container {
+        width: 100%;
+        display: inline-block;
+    }
+
+
+    .colour-container h3 {
+        width: 100%;
+        margin-top: 90px;
+
+    }
+
+
+    .colour {
+        width: 20%;
+
+        margin-top: 3%;
+        margin: 2.5%;
+
+        text-align: center;
+        float: left;
+    }
+
+    .colour h3 {
+
+        font-size: 25px;
+
+    }
+
+
+
+    .hex {
+        width: 100%;
+
+
+        border-radius: 5px;
+        box-shadow: 0 4px 10px 0 rgb(0 0 0 / 9%);
+
+    }
+
+
+
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width:767px) {
+
+
+
+    nav {
+        width: 100%;
+        height: 60px;
+        background: #6FC064;
+
+
+
+        position: fixed;
+
+        font-size: 16px;
+        font-weight: 400;
+        display: inline-block;
+
+
+    }
+
+
+    nav ul {
+        width: 100%;
+        height: 60px;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        float: right;
+        display: flex;
+        top: 60px;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        background-color: #6FC064;
+
+    }
+
+
+    #myLinks {
+        display: none;
+    }
+
+
+
+    li {
+
+
+        display: inline-block;
+        margin: auto;
+
+
+    }
+
+    .home-button {
+        width: 30%;
+        height: 60px;
+        margin: 0;
+        float: left;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+
+    #back-button {
+
+        width: 30%;
+
+    }
+
+    .back {
+        width: 40px;
+    }
+
+
+    a {
+        color: #ffffff;
+        text-decoration: none;
+    }
+
+    a.current {
+        color: #ffffff;
+        font-weight: bold;
+    }
+
+
+    .icon-container {
+        width: 25%;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        float: right;
+
+
+    }
+
+
+    .icon {
+        font-size: 35px;
+
+        color: #ffffff;
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .page-wrapper {
+        width: 100%;
+        float: right;
+        background-color: #ffffff;
+        margin-top: 50px;
+    }
+
+
+    .banner-container {
+        width: 100%;
+    }
+
+    .banner-container img {
+        width: 100%;
+    }
+
+
+    h2 {
+        color: #6fc064;
+        font-weight: 900;
+        font-size: 1rem;
+        letter-spacing: 1px;
+    }
+
+    p {
+        color: #333a40;
+        font-weight: 400;
+        font-size: 1.3rem;
+        line-height: 40px;
+
+        margin-top: 1%;
+    }
+
+    .page-wrapper {
+        width: 100%;
+        float: right;
+
+        margin-top: 50px;
+    }
+
+
+    .banner-container {
+        width: 100%;
+    }
+
+    .banner-container img {
+        width: 100%;
+    }
+
+
+
+    .container {
+        width: 100%;
+
+
+
+    }
+
+
+
+    .overview {
+        width: 90%;
+        margin: auto;
+
+    }
+
+    .overview h2 {
+        font-size: 40px;
+        font-weight: 700;
+
+
+    }
+
+    .overview p {
+        font-size: 21px;
+        font-weight: 400;
+        color: #38383A;
+        line-height: 40px;
+    }
+
+
+
+
+
+
+
+    /*case study section*/
+
+    main {
+        width: 100%;
+        margin: auto;
+
+
+    }
+
+    section {
+        width: 100%;
+        margin: auto;
+
+        padding-top: 5%;
+        padding-bottom: 5%;
+
+
+    }
+
+
+    .section-container {
+        width: 90%;
+        margin: auto;
+
+    }
+
+    section h2 {
+        width: 100%;
+
+        color: #38383A;
+        font-weight: 700;
+        font-size: 40px;
+
+        margin-top: 0px;
+
+    }
+
+    section h3 {
+        width: 70%;
+
+        color: #38383A;
+        margin-top: 10%;
+        font-weight: 700;
+        font-size: 25px;
+
+
+    }
+
+    section h4 {
+        width: 70%;
+        margin: auto;
+        color: #2D3950;
+        margin-top: 2%;
+        font-weight: 400;
+        font-size: 90PX;
+
+
+    }
+
+    section p {
+        width: 100%;
+
+        font-weight: 500;
+        font-size: 21px;
+        line-height: 40px;
+    }
+
+
+
+
+    .criteria-group-container {
+        width: 100%;
+        margin: auto;
+        margin-bottom: 5%;
+    }
+
+
+
+    .criteria-container {
+
+        width: 100%;
+
+        text-align: center;
+        display: inline-block;
+    }
+
+
+    .criteria {
+        width: 30%;
+
+
+
+        float: left;
+
+        margin: 1.66%;
+
+    }
+
+
+
+    .criteria img {
+        width: 100%;
+    }
+
+
+
+
+    .research-stats {
+        width: 100%;
+
+
+        display: inline-block;
+
+        margin-top: 100px;
+        border-top: #38383a6b solid 1px;
+
+
+    }
+
+
+
+
+    .pointimage {
+        width: 100%;
+        height: auto;
+        float: left;
+        text-align: center;
+
+    }
+
+    .pointimage img {
+        width: 50%;
+        margin-top: 50px;
+    }
+
+
+    .point {
+
+        width: 100%;
+        height: 100%;
+
+        float: left;
+        padding: 0px;
+
+
+
+    }
+
+
+    .point h1 {
+        font-size: 40px;
+        font-weight: 500;
+        margin: 5%;
+    }
+
+
+
+
+
+
+
+
+    .colourtypo-container {
+        width: 100%;
+
+        display: inline-block;
+    }
+
+
+
+    .typo-container {
+        width: 100%;
+        float: left;
+
+    }
+
+
+
+    .colour-container {
+        width: 100%;
+        float: left;
+
+    }
+
+
+    .colour {
+        width: 100%;
+        display: inline-block;
+
+        margin-top: 3%;
+    }
+
+    .colour h3 {
+        width: 60%;
+        margin-top: 10%;
+        float: left;
+    }
+
+
+
+    .hex {
+        width: 40%;
+
+        float: left;
+        border-radius: 5px;
+        box-shadow: 0 4px 10px 0 rgb(0 0 0 / 9%);
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

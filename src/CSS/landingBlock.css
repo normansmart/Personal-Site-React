@@ -1,31 +1,35 @@
 .landing-container {
     width: 400px;
-    height: 100%;
     position: relative;
     z-index: 0;
     font-size: 22px;
     margin-right: 0;
-    background-color: blueviolet;
- 
+    padding-top: 30px;
+
 }
 
 .introduction {
-    width: 100%;
-    font-size: 19px;
+    width: 95%;
+    font-size: 18px;
+    text-align: left;
+    margin: auto;
+   line-height: 28px;
 }
 
 h1 {
-    font-size: 84px;
-    font-weight: 300;
+    font-size: 2.3em;
+    font-weight: 700;
     margin: 0;
-    padding-top: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    line-height: 50px;
 }
 
 h3 {
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 600;
+    margin-bottom: 0px;
 }
-
 
 .socials {
     width: 70%;
@@ -34,7 +38,6 @@ h3 {
     align-items: center;
     margin: auto;
     margin: 0;
-    background-color: brown;
 }
 
 .socials img {
@@ -48,7 +51,7 @@ h3 {
     margin-top: 30px;
 }
 
-.updates-container h3{
+.updates-container h3 {
     font-size: 22px;
 }
 
@@ -56,8 +59,9 @@ h3 {
     width: 100%;
     height: 90%;
     border: 1px solid white;
-    overflow-y: auto;
+    overflow-y: scroll;
     scroll-behavior: smooth;
+   padding-bottom: 40px;
 }
 
 .update-list h3 {
@@ -74,3 +78,14 @@ h3 {
 }
 
 
+@media screen and (max-width:1024px) {
+
+    .landing-container {
+        width: 80%;
+        margin: auto;
+        background-color: blueviolet;
+        position: static;
+
+    }
+
+}

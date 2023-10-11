@@ -1,11 +1,34 @@
-.main-container{
+.main-container {
     width: 95%;
     height: 100vh;
     /* background-color: #0E1722; */
     color: white;
     display: flex;
     margin: auto;
- 
+
 }
 
 
+.rhap_container{
+    background-color: blue;
+    
+height: auto;
+}
+.rhap_progress-section{
+    display: none;
+}
+
+@media screen and (max-width:1024px) {
+
+    .main-container {
+        width: 100%;
+        /* background-color: #0E1722; */
+        color: white;
+        display: inline-block;
+        
+
+    }
+
+
+
+}

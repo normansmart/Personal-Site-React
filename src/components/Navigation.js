@@ -1,9 +1,9 @@
 import React from "react"
 import { Link } from "react-router-dom";
-import "./CSS/navigation.css"
+import "../CSS/navigation.css"
 const Navigation = ({  }) => {
 
-    const image = require('./images/logo.png')
+    const image = require('../images/logo.png')
     return (
       <nav className="nav-bar">
 
