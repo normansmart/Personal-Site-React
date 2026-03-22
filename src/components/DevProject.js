@@ -1,13 +1,16 @@
 import React from 'react';
+import { createRoot } from 'react-dom/client';
+import { BrowserRouter, Routes, Route, Link, Outlet } from 'react-router-dom';
+function DevProject({ orbit, project, image, link }) {
 
-function DevProject({orbit, project , image}) {
-
-console.log(orbit)
+  console.log(orbit, link)
   return (
 
-    <div id= {orbit}  >
+    <div id={orbit}  >
 
-     <img className= {project} src= {image} />
+      <Link to={link}>
+        <img className={project} src={image} />
+      </Link>
 
     </div>
 

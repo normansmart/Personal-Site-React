@@ -3,12 +3,11 @@ import { Octokit } from "octokit";
 import { useEffect, useState } from "react";
 import LandingBlock from "../components/LandingBlock";
 import ProjectBlock from "../components/ProjectBlock";
+import Navigation from '../components/Navigation';
+import CustomParallax from "../components/CustomParallax";
+import MusicPlayer from "../components/MusicPlayer";
 import AudioPlayer from 'react-h5-audio-player';
 import 'react-h5-audio-player/lib/styles.css';
-
-import ReactPlayer from 'react-player'
-
-import ReactAudioPlayer from 'react-audio-player';
 import "../CSS/home.css"
 
 //This page contains 2 sections: the personal info (LandingBlock) and project info (ProjectBlock)
@@ -25,12 +24,13 @@ const Homepage = ({ }) => {
             .then(r => r.json())
             .then(item => {
 
+                console.log(item)
                 setProjects(item.filter(
                     item => {
                         return item.name === "jersey-wyldlife" ||
                             item.name === "Attack-on-titan-tribute-game" ||
                             item.name === "REGIMEN" ||
-                            item.name === "Journal"
+                            item.name === "COUNTER-DEFENSE"
 
                     }
                 )
@@ -71,41 +71,46 @@ const Homepage = ({ }) => {
             })
     }, [])
 
-    useEffect(() => {
 
-
-    },[])
 
     return (
+        <body className="home-background">
 
-        <div className="main-container">
-            {/* <ReactPlayer playing={true}
+            {/* <CustomParallax /> */}
+            <div className="main-container">
+
+                {/* <ReactPlayer playing={true}
          controls={true}
           url='https://coderadio-admin-v2.freecodecamp.org/listen/coderadio/radio.mp3' /> */}
-            {/* <ReactAudioPlayer
+                {/* <ReactAudioPlayer
                 src="https://coderadio-admin-v2.freecodecamp.org/listen/coderadio/radio.mp3"
                 autoPlay
                 controls
             /> */}
 
-            <AudioPlayer
-           id="audio-player"
-           autoPlay={true}
-           
-           showJumpControls={false}
-           volume={.5}
-                src="https://coderadio-admin-v2.freecodecamp.org/listen/coderadio/radio.mp3"
-                onPlay={e => console.log("onPlay")}
-               
-            // other props here
-            />
 
-            <LandingBlock updates={projects} />
-            <ProjectBlock />
+                {/* <Navigation /> */}
 
 
-        </div>
 
+                <LandingBlock updates={projects} />
+                <ProjectBlock />
+                <div className="music-bot">
+                    <MusicPlayer />
+                    <AudioPlayer
+                        id="audio-player"
+                        autoPlay={true}
+                        showJumpControls={false}
+                        volume={.2}
+                        src="https://coderadio-admin-v2.freecodecamp.org/listen/coderadio/radio.mp3"
+                        onPlay={e => console.log("onPlay")}
+
+                    // other props here
+                    />
+                </div>
+            </div>
+
+        </body>
     )
 }
 

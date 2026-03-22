@@ -1,3 +1,9 @@
+.home-background{
+    background: url('../images/star\ background.gif') center;
+    background-size: auto;
+     overflow: hidden;
+}
+
 .main-container {
     width: 95%;
     height: 100vh;
@@ -5,17 +11,20 @@
     color: white;
     display: flex;
     margin: auto;
-
+    overflow: hidden;
 }
 
-
-.rhap_container{
-    background-color: blue;
-    
-height: auto;
-}
-.rhap_progress-section{
-    display: none;
+.music-bot{
+    width: 400px;
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    z-index: 2;
+    background-color: aliceblue;
 }
 
 @media screen and (max-width:1024px) {
@@ -25,7 +34,7 @@ height: auto;
         /* background-color: #0E1722; */
         color: white;
         display: inline-block;
-        
+
 
     }
 

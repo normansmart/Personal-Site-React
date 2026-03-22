@@ -9,17 +9,16 @@ function ProjectBlock ({}){
    const bunkbud = require('../images/bunkbud.png')
    const val = require('../images/vale.png')
 
-   const devProjectList = [{ imagePath: regimen, orbit: "regimen", project: "regimen-project" },
-   { imagePath: jwyld, orbit: "jwyld", project: "jwyld-project" },
-   { imagePath: bunkbud, orbit: "bunkbud", project: "bunkbud-project" },
-   { imagePath: val, orbit: "val", project: "val-project" }]
+   const devProjectList = [{ imagePath: regimen, orbit: "regimen", project: "regimen-project" , link: "/regimen" },
+   { imagePath: jwyld, orbit: "jwyld", project: "jwyld-project" , link: "/" },
+   { imagePath: bunkbud, orbit: "bunkbud", project: "bunkbud-project" , link: "/bunkbud" },
+   { imagePath: val, orbit: "val", project: "val-project" , link: "/val" }]
 
 
 return(
-   <div className="project-container"> 
-
-   <DevWork projects={devProjectList} />
    
+   <div className="project-container"> 
+   <DevWork projects={devProjectList} />
    </div>
 
 )

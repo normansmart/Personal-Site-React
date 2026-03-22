@@ -1,9 +1,10 @@
 import React from "react";
 import Typography from "../components/Typography";
+import Navigation from '../components/Navigation';
 
 import ProjectSummaryChart from "../components/ProjectSummaryChart";
 import PatchNotesCard from "../components/PatchNotesCard";
-import Navigation from "../images/project-vale/navigation.gif"
+import NavigationImage from "../images/project-vale/navigation.gif"
 import Accountcreate from "../images/project-vale/accountcreation.gif"
 import Dashboard from "../images/project-vale/dashboard.gif"
 import Workspace from "../images/project-vale/workspace.gif"
@@ -17,7 +18,7 @@ const Vale = ({ }) => {
     const colourscheme = require("../images/project-vale/colourscheme.png")
     return (
         < div className="page-wrapper" style={{ fontFamily: "Noto Sans" }}>
-
+         
             <div class="banner-container">
                 <img src="" />
             </div>
@@ -87,7 +88,7 @@ const Vale = ({ }) => {
                                     <p>• Customized Logout Button to end web sessions. </p>
                                 </ul>
                             </div>
-                            <img className="display-gif" src={Navigation} />
+                            <img className="display-gif" src={NavigationImage} />
 
                             <div className="feature">
                                 <h2> Account Creation </h2>

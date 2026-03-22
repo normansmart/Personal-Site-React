@@ -1,0 +1,34 @@
+.parallax-wrap {
+  width: 100vw;
+  height: 100vh;
+ overflow: hidden;
+  /* Prevents scrollbars from appearing due to movement */
+  position:absolute;
+  z-index: 0;
+}
+
+.parallax-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.1s linear;
+   overflow: hidden;
+  /* Smooths the movement */
+}
+
+.background {
+  /* Add background image/styles */
+  background: url('../images/star\ parallax\ 1.png') center;
+  background-size: cover;
+   overflow: hidden;
+}
+
+.foreground {
+  /* Add foreground styles */
+  background: url('../images/star\ parallax\ 2.png') center;
+  background-size: cover;
+   overflow: hidden;
+ 
+}

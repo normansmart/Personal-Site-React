@@ -8,20 +8,27 @@ import BunkBud from "./pages/BunkBud";
 
 import './App.css';
 
+
+
 function App() {
 
   return (
-    <div className="App">
+    <div className="App"  >
       <Router>
-        {/* <Navigation /> */}
-        <Routes>
-          <Route path="" element={<Homepage />} />
-          
-          {/* <Route path="/" element={<Vale />} /> */}
-          {/* <Route path="/" element={<Regimen />} /> */}
-          {/* <Route path="/" element={<BunkBud />} /> */}
-        </Routes>
+     
+          <Navigation />
+   
+     
+          <Routes>
 
+            <Route path="/" element={<Homepage />} />
+
+            <Route path="/val" element={<Vale />} />
+            <Route path="/regimen" element={<Regimen />} />
+            <Route path="/bunkbud" element={<BunkBud />} />
+
+          </Routes>
+       
       </Router>
 
     </div>

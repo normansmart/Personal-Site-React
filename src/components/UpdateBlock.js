@@ -1,20 +1,23 @@
 import React from "react";
-import { compareAsc, format } from 'date-fns'
+import { Link } from "react-router-dom";
 
-function UpdateBlock ({name , description, url , updatedAt}){
+function UpdateBlock({ name, description, url, updatedAt }) {
 
+    const date = new Date(updatedAt)
+    const formattedDate = date.toLocaleString();
 
+    return (
 
+        <div className="update-tab">
+            <Link className="update-link" to={url}>
+                <h3 style={{ fontSize: "18px" }}> {name} </h3>
 
-return(
-    <div className="update-tab">
-    {/* <p> {updatedAt} </p> */}
-    <h2 style={{fontSize: "16px" , textIndent: "20px" }}> {name} </h2>
- 
-    <p style={{width: "85%" , marginLeft: "7%"}}> {description} </p>
-   
-    </div>
-)
+                <p> {description} </p>
+                <p style={{ bottom: "0%" }}> Last Updated: {formattedDate} </p>
+            </Link>
+        </div>
+
+    )
 
 }
 
