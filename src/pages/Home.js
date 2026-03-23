@@ -17,50 +17,60 @@ const Homepage = ({ }) => {
     const [showProject, setShowProject] = useState(false)
 
     const [projects, setProjects] = useState([])
+    const regimen = require('../images/regimen-hiRes.png')
+    const jwyld = require('../images/jwyld-hiRes.png')
+    const bunkbud = require('../images/bunkbud-hiRes.png')
+    const val = require('../images/val-hiRes.png')
 
     const projectInfo = [
         {
-            name: "Regimen",
-            color: "",
-            background: "",
-            font: "",
+            name: "REGIMEN",
+            color: "#38383A",
+            background: "#FFF7ED",
+            font: "Lato",
             idName: "regimen-display",
-            description: "A habit tracking app designed & prototyped in Figma. It allows users to create and track their habits, set reminders, and view their progress over time.",
+            image: regimen,
+            stack: "Figma Prototyping | Adobe Illustrator",
+            description: "Habit tracker app. It allows users to set reminders, track progress & customize their experience.",
         },
 
         {
-            name: "Vale",
-            color: "",
-            background: "",
-            font: "",
+            name: "VALE",
+            color: "#38383A",
+            background: "white",
+            font: "Lato",
             idName: "val-display",
-            description: "A code sharing app made in React.js & Ruby on Rails. It allows users to create and share code snippets, view and comment on other users' snippets, and search/write code by language or keyword.",
+            image: val,
+            stack: "React.js | RubyonRails | CSS | Heroku",
+            description: "A code sharing app that lets users form groups and share language specific code snippets.",
         },
 
         {
-            name: "Counter Defense",
+            name: "COUNTER DEFENSE" ,
             color: "",
             background: "",
             font: "",
             idName: "counter-defense-display",
-            description: "A turn based Pokemon card game made in React.js. It allows users to play against an opponent, choose their deck, and battle using their cards' unique abilities and stats.",
+            description: "Play your friend in ",
         },
 
         {
-            name: "BunkBud",
-            color: "",
-            background: "",
-            font: "",
+            name: "BUNKBUD",
+            color: "#519448",
+            background: "white",
+            font: "Montserrat",
+            image: bunkbud,
             idName: "bunkbud-display",
-            description: "A roommate matching app designed for IOS. It allows users to create a profile, answer questions about their lifestyle and preferences, and view potential roommate matches based on compatibility scores.",
+            description: "Roommate finder app design for college students. Compatibility matching, ID-verification & Direct Messaging.",
         },
 
         {
-            name: "Jersey Wyldlife",
+            name: "JERSEY WYLDLIFE",
             color: "",
             background: "",
+            image: jwyld,
             idName: "jwyld-display",
-            description: "A wildlife management website made in JS, HTML & CSS. It allows users to view information about local wildlife, schedule appointments and learn about their services.",
+            description: "Nuisance wildlife management website. View services, make requests & learn about animals.",
         },
 
     ]
@@ -161,19 +171,7 @@ const Homepage = ({ }) => {
 
                 <LandingBlock updates={projects} state={showProject} />
                 <ProjectBlock show={displayProject} />
-                <div className="music-bot">
-                    <MusicPlayer />
-                    <AudioPlayer
-                        id="audio-player"
-                        autoPlay={false}
-                        showJumpControls={false}
-                        volume={.2}
-                        src="https://coderadio-admin-v2.freecodecamp.org/listen/coderadio/radio.mp3"
-                        onPlay={e => console.log("onPlay")}
-
-                    // other props here
-                    />
-                </div>
+               
             </div>
 
         </body>
