@@ -13,65 +13,143 @@ import "../CSS/home.css"
 //This page contains 2 sections: the personal info (LandingBlock) and project info (ProjectBlock)
 const Homepage = ({ }) => {
 
+    // State variables for the project blocks, they will be used to trigger the display of the project info when the user hovers over the project image in the ProjectBlock component. Each project has its own state variable and show function that will be passed as props to the ProjectBlock component.
+    const [showProject, setShowProject] = useState(false)
+
     const [projects, setProjects] = useState([])
 
+    const projectInfo = [
+        {
+            name: "Regimen",
+            color: "",
+            background: "",
+            font: "",
+            idName: "regimen-display",
+            description: "A habit tracking app designed & prototyped in Figma. It allows users to create and track their habits, set reminders, and view their progress over time.",
+        },
+
+        {
+            name: "Vale",
+            color: "",
+            background: "",
+            font: "",
+            idName: "val-display",
+            description: "A code sharing app made in React.js & Ruby on Rails. It allows users to create and share code snippets, view and comment on other users' snippets, and search/write code by language or keyword.",
+        },
+
+        {
+            name: "Counter Defense",
+            color: "",
+            background: "",
+            font: "",
+            idName: "counter-defense-display",
+            description: "A turn based Pokemon card game made in React.js. It allows users to play against an opponent, choose their deck, and battle using their cards' unique abilities and stats.",
+        },
+
+        {
+            name: "BunkBud",
+            color: "",
+            background: "",
+            font: "",
+            idName: "bunkbud-display",
+            description: "A roommate matching app designed for IOS. It allows users to create a profile, answer questions about their lifestyle and preferences, and view potential roommate matches based on compatibility scores.",
+        },
+
+        {
+            name: "Jersey Wyldlife",
+            color: "",
+            background: "",
+            idName: "jwyld-display",
+            description: "A wildlife management website made in JS, HTML & CSS. It allows users to view information about local wildlife, schedule appointments and learn about their services.",
+        },
+
+    ]
+
+
+
     useEffect(() => {
-        fetch("https://api.github.com/users/normansmart/repos?per_page=100", {
-            headers: {
-                'X-GitHub-Api-Version': '2022-11-28'
-            }
-        })
-            .then(r => r.json())
-            .then(item => {
+        // Load upon page load, fetch the project info and set it to state so it can be passed as props to the landing block
 
-                console.log(item)
-                setProjects(item.filter(
-                    item => {
-                        return item.name === "jersey-wyldlife" ||
-                            item.name === "Attack-on-titan-tribute-game" ||
-                            item.name === "REGIMEN" ||
-                            item.name === "COUNTER-DEFENSE"
+        function projectViewer() {
+            setProjects(projectInfo)
+        }
 
-                    }
-                )
-                )
+        projectViewer();
 
-            }).catch(error => {
-                console.log(error)
-            })
+    }, []);
 
-        // async function test() {
+    // function showRegimen() {
+    //     // const regimen = document.getElementById("regimen-display");
+    //     // const val = document.getElementById("val-display");
+    //     // const bunkbud = document.getElementById("bunkbud-display");
+    //     // const jwyld = document.getElementById("jwyld-display");      
 
-        //     const octokit = new Octokit({
-        //         auth: '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'
-        //     })
+    // }
 
-        //     await octokit.request('GET /users/{username}/repos', {
-        //         username: 'normansmart',
-        //         headers: {
-        //             'X-GitHub-Api-Version': '2022-11-28'
-        //         }
-        //     })
+    const displayProject = (e) => {
 
 
+        if (e.target.className === "regimen-project") {
+            const regimen = document.getElementById("regimen-display");
+            const val = document.getElementById("val-display");
+            const bunkbud = document.getElementById("bunkbud-display");
+            const jwyld = document.getElementById("jwyld-display");
+            regimen.style.visibility = "visible";
+            regimen.style.opacity = 1;
+            val.style.visibility = "hidden";
+            val.style.opacity = 0;
+            bunkbud.style.visibility = "hidden";
+            bunkbud.style.opacity = 0;
+            jwyld.style.visibility = "hidden";
+            jwyld.style.opacity = 0;
+            console.log("regimen")
 
-        // }
+        } else if (e.target.className === "val-project") {
+            const val = document.getElementById("val-display");
+            const regimen = document.getElementById("regimen-display");
+            const bunkbud = document.getElementById("bunkbud-display");
+            const jwyld = document.getElementById("jwyld-display");
+            val.style.visibility = "visible";
+            val.style.opacity = 1;
+            regimen.style.visibility = "hidden";
+            regimen.style.opacity = 0;
+            bunkbud.style.visibility = "hidden";
+            bunkbud.style.opacity = 0;
+            jwyld.style.visibility = "hidden";
+            jwyld.style.opacity = 0;
+            console.log("val")
+        } else if (e.target.className === "bunkbud-project") {
+            const bunkbud = document.getElementById("bunkbud-display");
+            const regimen = document.getElementById("regimen-display");
+            const val = document.getElementById("val-display");
+            const jwyld = document.getElementById("jwyld-display");
+            bunkbud.style.visibility = "visible";
+            bunkbud.style.opacity = 1;
+            regimen.style.visibility = "hidden";
+            regimen.style.opacity = 0;
+            val.style.visibility = "hidden";
+            val.style.opacity = 0;
+            jwyld.style.visibility = "hidden";
+            jwyld.style.opacity = 0;
+            console.log("bunkbud")
+        } else if (e.target.className === "jwyld-project") {
+            const jwyld = document.getElementById("jwyld-display");
+            const regimen = document.getElementById("regimen-display");
+            const val = document.getElementById("val-display");
+            const bunkbud = document.getElementById("bunkbud-display");
+            jwyld.style.visibility = "visible";
+            jwyld.style.opacity = 1;
+            regimen.style.visibility = "hidden";
+            regimen.style.opacity = 0;
+            val.style.visibility = "hidden";
+            val.style.opacity = 0;
+            bunkbud.style.visibility = "hidden";
+            bunkbud.style.opacity = 0;
+            console.log("jwyld")
+        }
 
-    }, [])
 
-    useEffect(() => {
-        fetch("https://api.github.com/repos/normansmart/Journal/commits", {
-            headers: {
-                'X-GitHub-Api-Version': '2022-11-28'
-            }
-        })
-            .then(r => r.json())
-            .then(item => {
-                console.log(item)
-            })
-    }, [])
-
-
+    }
 
     return (
         <body className="home-background">
@@ -79,27 +157,15 @@ const Homepage = ({ }) => {
             {/* <CustomParallax /> */}
             <div className="main-container">
 
-                {/* <ReactPlayer playing={true}
-         controls={true}
-          url='https://coderadio-admin-v2.freecodecamp.org/listen/coderadio/radio.mp3' /> */}
-                {/* <ReactAudioPlayer
-                src="https://coderadio-admin-v2.freecodecamp.org/listen/coderadio/radio.mp3"
-                autoPlay
-                controls
-            /> */}
-
-
                 {/* <Navigation /> */}
 
-
-
-                <LandingBlock updates={projects} />
-                <ProjectBlock />
+                <LandingBlock updates={projects} state={showProject} />
+                <ProjectBlock show={displayProject} />
                 <div className="music-bot">
                     <MusicPlayer />
                     <AudioPlayer
                         id="audio-player"
-                        autoPlay={true}
+                        autoPlay={false}
                         showJumpControls={false}
                         volume={.2}
                         src="https://coderadio-admin-v2.freecodecamp.org/listen/coderadio/radio.mp3"

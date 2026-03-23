@@ -2,7 +2,7 @@ import React from "react";
 import DevProject from "./DevProject";
 import CenterSun from "../images/sun.gif"
 
-function DevWork({ projects }) {
+function DevWork({ projects , show }) {
     console.log(projects)
 
     const sunGif = require('../images/sun.gif')
@@ -10,7 +10,7 @@ function DevWork({ projects }) {
         item => {
 
             return (
-                <DevProject orbit={item.orbit} project={item.project} image={item.imagePath} link={item.link} />
+                <DevProject orbit={item.orbit} project={item.project} image={item.imagePath} link={item.link} show={show} />
             )
         }
     )

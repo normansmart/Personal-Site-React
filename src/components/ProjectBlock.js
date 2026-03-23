@@ -2,7 +2,7 @@ import React from "react";
 import DevWork from "./DevWork";
 import "../CSS/projectBlock.css"
 
-function ProjectBlock ({}){
+function ProjectBlock ({show}){
 
    const regimen = require('../images/regimen.png')
    const jwyld = require('../images/jwyld.png')
@@ -18,7 +18,7 @@ function ProjectBlock ({}){
 return(
    
    <div className="project-container"> 
-   <DevWork projects={devProjectList} />
+   <DevWork projects={devProjectList} show={show} />
    </div>
 
 )

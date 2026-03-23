@@ -16,7 +16,9 @@ const github = require('../images/github.png')
 const linkedin = require('../images/linkedin.png')
 const gmail = require('../images/gmail.png')
 const discord = require('../images/discord.png')
-const LandingBlock = ({ updates }) => {
+
+
+const LandingBlock = ({ updates, state }) => {
 
     const socialLogos = [
         { imagePath: github, colour: "white" },
@@ -38,7 +40,7 @@ const LandingBlock = ({ updates }) => {
             console.log(item)
             return (
                 <>
-                    <UpdateBlock key={item.id} name={item.name} description={item.description} message={item.commits_url} url={item.clone_url} updatedAt={item.updated_at} />
+                    <UpdateBlock key={item.id} name={item.name} description={item.description} message={item.commits_url} url={item.clone_url} updatedAt={item.updated_at} id={item.idName} state={state} />
                 </>
             )
         }
@@ -48,7 +50,7 @@ const LandingBlock = ({ updates }) => {
 
         <div className="landing-container">
 
-            <p className="introduction"> <span> <h1> Hello, I'm a full-stack developer and special education teacher. 
+            <p className="introduction"> <span> <h1> I'm a full-stack developer and special education teacher. 
                 I like to build apps for fun and educational content for my students.
             </h1> </span>
 
