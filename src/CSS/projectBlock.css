@@ -19,19 +19,23 @@
 }
 
 #inner-circle4 {
-  width: 20%;
-  height: 20%;
+  width: 15%;
+  height: 15%;
   position: absolute;
-  left: 40%;
-  top: 40%;
-  border-radius: 0%;
-  background-color: #F9D796;
+  left: 42.5%;
+  top: 42.5%;
+  border-radius: 100%;
   text-align: center;
-  animation: starglow 10s infinite linear;
+  object-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
 .sun-gif {
-  width: 100%;
+  width: 120%;
+  animation: expand 10s infinite linear;
 }
 
 #val {
@@ -54,6 +58,8 @@
   left: -3%;
   z-index: 11;
 }
+
+
 
 
 #jwyld {
@@ -138,6 +144,34 @@
   }
 }
 
+@keyframes expand {
+  0% {
+    transform: scale(1);
+
+  }
+
+  25% {
+
+    transform: scale(1.05);
+  }
+
+  50% {
+    transform: scale(1.1);
+
+  }
+
+  75% {
+    transform: scale(1.05);
+
+  }
+
+  100% {
+    transform: scale(1);
+
+  }
+
+
+}
 
 @keyframes starglow {
   0% {

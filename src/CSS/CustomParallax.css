@@ -4,7 +4,8 @@
  overflow: hidden;
   /* Prevents scrollbars from appearing due to movement */
   position:absolute;
-  z-index: 0;
+
+
 }
 
 .parallax-layer {
@@ -16,19 +17,25 @@
   transition: transform 0.1s linear;
    overflow: hidden;
   /* Smooths the movement */
+  z-index: 0;
 }
 
 .background {
   /* Add background image/styles */
-  background: url('../images/star\ parallax\ 1.png') center;
+  width: 102%;
+  height: 103%;
+  background: url('../images/staralexis.png') center;
+  opacity: .9;
   background-size: cover;
+  background-repeat: repeat;
    overflow: hidden;
 }
 
 .foreground {
-  /* Add foreground styles */
-  background: url('../images/star\ parallax\ 2.png') center;
-  background-size: cover;
+ 
+  background: url('../images/star\ background.gif') center;
+  background-size: auto;
+  background-repeat: repeat;
    overflow: hidden;
  
 }

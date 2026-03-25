@@ -2,21 +2,21 @@ import React from "react";
 import { useEffect, useState } from "react";
 import UpdateBlock from "./UpdateBlock";
 import SocialButton from "../components/SocialButton";
+import Navigation from '../components/Navigation';
+import MusicPlayer from "../components/MusicPlayer";
+import AudioPlayer from 'react-h5-audio-player';
+import 'react-h5-audio-player/lib/styles.css';
 import "../CSS/landingBlock.css"
 import "../images/github.png"
 
-import AudioPlayer from 'react-h5-audio-player';
-import 'react-h5-audio-player/lib/styles.css';
-
-import ReactPlayer from 'react-player'
-
-import ReactAudioPlayer from 'react-audio-player';
 
 const github = require('../images/github.png')
 const linkedin = require('../images/linkedin.png')
 const gmail = require('../images/gmail.png')
 const discord = require('../images/discord.png')
-const LandingBlock = ({ updates }) => {
+
+
+const LandingBlock = ({ updates, state }) => {
 
     const socialLogos = [
         { imagePath: github, colour: "white" },
@@ -37,9 +37,9 @@ const LandingBlock = ({ updates }) => {
         item => {
             console.log(item)
             return (
-                <>
-                    <UpdateBlock key={item.id} name={item.name} description={item.description} message={item.commits_url} url={item.clone_url} updatedAt={item.updated_at} />
-                </>
+
+                <UpdateBlock key={item.id} name={item.name} description={item.description} url={item.url} id={item.idName} state={state} color={item.color} background={item.background} image={item.image} font={item.font} stack={item.stack} />
+
             )
         }
     )
@@ -48,17 +48,31 @@ const LandingBlock = ({ updates }) => {
 
         <div className="landing-container">
 
-            <p className="introduction"> <span> <h1> Hello, I'm a full-stack developer and special education teacher. 
-                I like to build apps for fun and educational content for my students.
+            <Navigation />
+            <p className="introduction"> <span> <h1> I’m a full-stack developer and Special-Education educator dedicated to building engaging applications and creating impactful, accessible learning experiences.
             </h1> </span>
 
-                Feel free to look over some of my projects, read their case studies, look through my artwork or just enjoy the music.</p>
+                Explore the solar system to navigate my projects—each planet leads to a build and its case study. You’ll the music bar below to set the vibe while you browse.</p>
+
             <div className="socials"> {socialList} </div>
-            <div className="updates-container">
-            
-                <div className="update-list-container">
-                    {updateList}
-                </div>
+
+
+            <div className="update-list-container">
+                {updateList}
+            </div>
+
+            <div className="music-bot">
+                <MusicPlayer />
+                <AudioPlayer
+                    id="audio-player"
+                    autoPlay={false}
+                    showJumpControls={false}
+                    volume={.2}
+                    src="https://coderadio-admin-v2.freecodecamp.org/listen/coderadio/radio.mp3"
+                    onPlay={e => console.log("onPlay")}
+
+                // other props here
+                />
             </div>
         </div>
 

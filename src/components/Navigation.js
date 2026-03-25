@@ -1,14 +1,7 @@
 import React from "react"
 import { Link } from "react-router-dom";
-
-import { useEffect, useState } from "react";
-
-
-import ReactPlayer from 'react-player'
-
-import ReactAudioPlayer from 'react-audio-player';
 import "../CSS/navigation.css"
-import { tr } from "date-fns/locale";
+
 
 
 const Navigation = ({ }) => {
@@ -35,7 +28,7 @@ const Navigation = ({ }) => {
       <ul className="nav-links" >
         <Link className="link" to='/'> <li> Projects</li> </Link>
         <Link className="link" to='https://www.cassie.codes/'> <li> design </li></Link>
-        <Link className="link" to='/settings'> <li> About </li> </Link>
+        <Link className="link" to='/'> <li> About </li> </Link>
       </ul>
     </nav>
   )
