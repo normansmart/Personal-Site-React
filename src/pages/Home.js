@@ -30,7 +30,8 @@ const Homepage = ({ }) => {
             font: "Lato",
             idName: "regimen-display",
             image: regimen,
-            stack: "Figma Prototyping | Adobe Illustrator",
+            stack: "Figma | Adobe Illustrator",
+            url: "/regimen",
             description: "Habit tracker app. It allows users to set reminders, track progress & customize their experience.",
         },
 
@@ -41,16 +42,18 @@ const Homepage = ({ }) => {
             font: "Lato",
             idName: "val-display",
             image: val,
-            stack: "React.js | RubyonRails | CSS | Heroku",
+            stack: "React.js | RubyonRails | CSS | Render",
+             url: "/val",
             description: "A code sharing app that lets users form groups and share language specific code snippets.",
         },
 
         {
-            name: "COUNTER DEFENSE" ,
+            name: "COUNTER DEFENSE",
             color: "",
             background: "",
             font: "",
             idName: "counter-defense-display",
+            stack: "Javascript | HTML | CSS | Render",
             description: "Play your friend in ",
         },
 
@@ -61,15 +64,20 @@ const Homepage = ({ }) => {
             font: "Montserrat",
             image: bunkbud,
             idName: "bunkbud-display",
-            description: "Roommate finder app design for college students. Compatibility matching, ID-verification & Direct Messaging.",
+            stack: "Figma | Adobe Illustrator",
+             url: "/bunkbud",
+            description: "Room sharing app designed for college students. Compatibility matching, Id-verify, messaging.",
         },
 
         {
             name: "JERSEY WYLDLIFE",
-            color: "",
-            background: "",
+            color: "#133a2bc2",
+            background: "#f0e3d0",
+            font: "Mulish",
             image: jwyld,
             idName: "jwyld-display",
+            stack: "React.js | RubyonRails | CSS | Render",
+             url: "/",
             description: "Nuisance wildlife management website. View services, make requests & learn about animals.",
         },
 
@@ -97,13 +105,13 @@ const Homepage = ({ }) => {
     // }
 
     const displayProject = (e) => {
-
+        const regimen = document.getElementById("regimen-display");
+        const val = document.getElementById("val-display");
+        const bunkbud = document.getElementById("bunkbud-display");
+        const jwyld = document.getElementById("jwyld-display");
 
         if (e.target.className === "regimen-project") {
-            const regimen = document.getElementById("regimen-display");
-            const val = document.getElementById("val-display");
-            const bunkbud = document.getElementById("bunkbud-display");
-            const jwyld = document.getElementById("jwyld-display");
+
             regimen.style.visibility = "visible";
             regimen.style.opacity = 1;
             val.style.visibility = "hidden";
@@ -115,10 +123,7 @@ const Homepage = ({ }) => {
             console.log("regimen")
 
         } else if (e.target.className === "val-project") {
-            const val = document.getElementById("val-display");
-            const regimen = document.getElementById("regimen-display");
-            const bunkbud = document.getElementById("bunkbud-display");
-            const jwyld = document.getElementById("jwyld-display");
+
             val.style.visibility = "visible";
             val.style.opacity = 1;
             regimen.style.visibility = "hidden";
@@ -129,10 +134,7 @@ const Homepage = ({ }) => {
             jwyld.style.opacity = 0;
             console.log("val")
         } else if (e.target.className === "bunkbud-project") {
-            const bunkbud = document.getElementById("bunkbud-display");
-            const regimen = document.getElementById("regimen-display");
-            const val = document.getElementById("val-display");
-            const jwyld = document.getElementById("jwyld-display");
+
             bunkbud.style.visibility = "visible";
             bunkbud.style.opacity = 1;
             regimen.style.visibility = "hidden";
@@ -143,10 +145,7 @@ const Homepage = ({ }) => {
             jwyld.style.opacity = 0;
             console.log("bunkbud")
         } else if (e.target.className === "jwyld-project") {
-            const jwyld = document.getElementById("jwyld-display");
-            const regimen = document.getElementById("regimen-display");
-            const val = document.getElementById("val-display");
-            const bunkbud = document.getElementById("bunkbud-display");
+
             jwyld.style.visibility = "visible";
             jwyld.style.opacity = 1;
             regimen.style.visibility = "hidden";
@@ -158,20 +157,20 @@ const Homepage = ({ }) => {
             console.log("jwyld")
         }
 
-
     }
+
 
     return (
         <body className="home-background">
 
-            {/* <CustomParallax /> */}
+            <CustomParallax />
             <div className="main-container">
 
                 {/* <Navigation /> */}
 
                 <LandingBlock updates={projects} state={showProject} />
                 <ProjectBlock show={displayProject} />
-               
+
             </div>
 
         </body>

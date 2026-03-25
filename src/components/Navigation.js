@@ -28,7 +28,7 @@ const Navigation = ({ }) => {
       <ul className="nav-links" >
         <Link className="link" to='/'> <li> Projects</li> </Link>
         <Link className="link" to='https://www.cassie.codes/'> <li> design </li></Link>
-        <Link className="link" to='/settings'> <li> About </li> </Link>
+        <Link className="link" to='/'> <li> About </li> </Link>
       </ul>
     </nav>
   )

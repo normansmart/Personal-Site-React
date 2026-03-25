@@ -1,6 +1,6 @@
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Navigation from './components/Navigation';
+
 import Homepage from './pages/Home';
 import Vale from "./pages/Vale";
 import Regimen from "./pages/Regimen";
@@ -16,7 +16,7 @@ function App() {
     <div className="App"  >
       <Router>
      
-          <Navigation />
+         
    
      
           <Routes>
